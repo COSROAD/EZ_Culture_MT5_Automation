@@ -14,3 +14,8 @@ Live trading/runtime execution.
 
 Do not mix these domains.
 Runtime raw data must not be stored in GitHub.
+## Canonical Source Policy
+
+- Byte-identical Culture/EZ source is stored in GitHub as a Single Canonical Source.
+- Broker-specific runtime deployment remains separated between EZ Square and Culture Capital.
+- Canonical source deduplication does not mean runtime broker merge.
