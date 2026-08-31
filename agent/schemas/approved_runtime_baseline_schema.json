@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approved Runtime Baseline",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "baseline_version",
+    "baseline_status",
+    "approved_at",
+    "approved_by",
+    "baseline_hash",
+    "broker",
+    "server",
+    "charts"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "baseline_version": {
+      "type": "string"
+    },
+    "baseline_status": {
+      "const": "APPROVED"
+    },
+    "approved_at": {
+      "type": "string"
+    },
+    "approved_by": {
+      "const": "USER"
+    },
+    "baseline_hash": {
+      "type": "string"
+    },
+    "broker": {
+      "type": "string"
+    },
+    "server": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "charts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "symbol",
+          "chart_period",
+          "expected_chart_count",
+          "indicators"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "chart_period": {
+            "type": "string"
+          },
+          "expected_chart_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "indicators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "indicator_name",
+                "indicator_count",
+                "indicator_order",
+                "input_parameters",
+                "ma_period",
+                "ma_method",
+                "ma_applied_price",
+                "macd_fast",
+                "macd_slow",
+                "macd_signal",
+                "display_rule",
+                "signal_color_rule",
+                "legacy_present",
+                "generatedtime_present",
+                "csv_stream",
+                "expected_file",
+                "expected_schema",
+                "expected_runtime_role"
+              ],
+              "properties": {
+                "indicator_name": {
+                  "type": "string"
+                },
+                "indicator_count": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "indicator_order": {},
+                "input_parameters": {
+                  "type": "object"
+                },
+                "ma_period": {},
+                "ma_method": {},
+                "ma_applied_price": {},
+                "macd_fast": {},
+                "macd_slow": {},
+                "macd_signal": {},
+                "display_rule": {},
+                "signal_color_rule": {},
+                "legacy_present": {},
+                "generatedtime_present": {},
+                "csv_stream": {},
+                "expected_file": {},
+                "expected_schema": {},
+                "expected_runtime_role": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

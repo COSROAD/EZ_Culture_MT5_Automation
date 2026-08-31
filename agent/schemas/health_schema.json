@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PROJECT_EZ_Culture Health Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "expires_at",
+    "agent_version",
+    "system_health_status",
+    "delivery_lifecycle_status",
+    "modules",
+    "alerts",
+    "warnings",
+    "failures",
+    "task_candidates"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    },
+    "agent_version": {
+      "type": "string"
+    },
+    "system_health_status": {
+      "type": "string"
+    },
+    "delivery_lifecycle_status": {
+      "type": "string"
+    },
+    "modules": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "alerts": {
+      "type": "array"
+    },
+    "warnings": {
+      "type": "array"
+    },
+    "failures": {
+      "type": "array"
+    },
+    "task_candidates": {
+      "type": "array"
+    }
+  }
+}

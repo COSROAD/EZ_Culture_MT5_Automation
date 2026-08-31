@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MT5 Runtime Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "captured_at",
+    "broker",
+    "server",
+    "charts"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "captured_at": {
+      "type": "string"
+    },
+    "broker": {
+      "type": "string"
+    },
+    "server": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "charts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "symbol",
+          "chart_period",
+          "indicators"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "chart_period": {
+            "type": "string"
+          },
+          "indicators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "indicator_name"
+              ],
+              "properties": {
+                "indicator_name": {
+                  "type": "string"
+                },
+                "indicator_order": {},
+                "input_parameters": {
+                  "type": "object"
+                },
+                "legacy_present": {},
+                "generatedtime_present": {},
+                "expected_runtime_role": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

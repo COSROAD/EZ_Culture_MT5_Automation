@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Health Agent Runtime State",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "last_successful_check": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "file_checkpoints": {
+      "type": "object"
+    },
+    "known_duplicates": {
+      "type": "array"
+    },
+    "rewrite_checkpoints": {
+      "type": "object"
+    }
+  }
+}
