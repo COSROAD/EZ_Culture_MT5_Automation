@@ -1,0 +1,24 @@
+{
+  "report_id_format": "MARKET5_YYYYMMDD_HHMM_KST_<unique suffix>",
+  "delivery_order": [
+    "REPORT_GENERATED",
+    "HISTORY_SAVED",
+    "HISTORY_REOPEN_VERIFIED",
+    "LATEST_UPDATED",
+    "LATEST_REOPEN_VERIFIED",
+    "REPORT_ID_MATCH",
+    "CONTENT_HASH_MATCH",
+    "CONTROL_READABLE",
+    "DATA_FRESHNESS_CHECKED",
+    "CONTROL_RECEIVED"
+  ],
+  "statuses": [
+    "PASS",
+    "FAIL",
+    "STALE",
+    "VERIFY_REQUIRED"
+  ],
+  "latest_report_name": "MARKET5_LATEST_REPORT",
+  "delivery_status_name": "MARKET5_DELIVERY_STATUS.json",
+  "live_deployment": false
+}

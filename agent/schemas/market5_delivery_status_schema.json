@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARKET5 Delivery Status",
+  "type": "object",
+  "required": [
+    "report_id",
+    "scheduled_run_time_kst",
+    "generated_time_kst",
+    "history_saved",
+    "history_verified",
+    "latest_updated",
+    "latest_verified",
+    "latest_report_id",
+    "control_readable",
+    "report_freshness",
+    "signal_freshness",
+    "market_freshness",
+    "web_market_freshness",
+    "delivery_status",
+    "failure_stage",
+    "verified_at_kst"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "pattern": "^MARKET5_[0-9]{8}_[0-9]{4}_KST_[A-F0-9]+$"
+    },
+    "scheduled_run_time_kst": {
+      "type": "string"
+    },
+    "generated_time_kst": {
+      "type": "string"
+    },
+    "drive_saved_time_kst": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "history_saved": {
+      "type": "boolean"
+    },
+    "history_verified": {
+      "type": "boolean"
+    },
+    "latest_updated": {
+      "type": "boolean"
+    },
+    "latest_verified": {
+      "type": "boolean"
+    },
+    "latest_report_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "report_id_match": {
+      "type": "boolean"
+    },
+    "content_hash_match": {
+      "type": "boolean"
+    },
+    "control_readable": {
+      "type": "boolean"
+    },
+    "report_freshness": {
+      "enum": [
+        "FRESH",
+        "STALE",
+        "VERIFY_REQUIRED"
+      ]
+    },
+    "signal_freshness": {
+      "type": "string"
+    },
+    "market_freshness": {
+      "type": "string"
+    },
+    "web_market_freshness": {
+      "type": "string"
+    },
+    "delivery_status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "STALE",
+        "VERIFY_REQUIRED"
+      ]
+    },
+    "failure_stage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "last_error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verified_at_kst": {
+      "type": "string"
+    },
+    "last_valid_report_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "last_valid_report_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
