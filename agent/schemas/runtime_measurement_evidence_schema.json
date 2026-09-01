@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runtime Measurement Evidence",
+  "type": "object",
+  "required": [
+    "classification",
+    "disclaimer",
+    "captured_at",
+    "discovery_method",
+    "broker",
+    "server",
+    "charts",
+    "measurements",
+    "verify_required_remaining"
+  ],
+  "properties": {
+    "classification": {
+      "const": "RUNTIME_MEASUREMENT_EVIDENCE"
+    },
+    "disclaimer": {
+      "const": "THIS IS NOT APPROVED_RUNTIME_BASELINE"
+    },
+    "captured_at": {
+      "type": "string"
+    },
+    "discovery_method": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "broker": {
+      "type": "object"
+    },
+    "server": {
+      "type": "object"
+    },
+    "charts": {
+      "type": "array"
+    },
+    "measurements": {
+      "type": "object"
+    },
+    "verify_required_remaining": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

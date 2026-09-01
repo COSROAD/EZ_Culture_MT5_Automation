@@ -31,3 +31,7 @@ token*
 *service-account*.json
 
 # Do not blanket-ignore *.json; schemas/templates may be versioned.
+
+# Python runtime artifacts
+__pycache__/
+*.pyc
