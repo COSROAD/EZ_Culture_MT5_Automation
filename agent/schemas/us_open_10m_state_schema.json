@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "US Open 10-Minute Intensive Monitor State",
+  "type": "object",
+  "required": [
+    "check_id",
+    "check_time_kst",
+    "window_status",
+    "data_freshness",
+    "markets",
+    "triggers",
+    "alert_decision",
+    "authority"
+  ],
+  "properties": {
+    "check_id": {
+      "type": "string"
+    },
+    "check_time_kst": {
+      "type": "string"
+    },
+    "window_status": {
+      "enum": [
+        "ACTIVE",
+        "OUTSIDE_WINDOW",
+        "VERIFY_REQUIRED"
+      ]
+    },
+    "data_freshness": {
+      "type": "object"
+    },
+    "markets": {
+      "type": "object"
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "alert_decision": {
+      "enum": [
+        "ALERT",
+        "NO_MATERIAL_CHANGE",
+        "VERIFY_REQUIRED"
+      ]
+    },
+    "authority": {
+      "const": "EARLY_WARNING_ONLY"
+    },
+    "hourly_latest_overwrite_allowed": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

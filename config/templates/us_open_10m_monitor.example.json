@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK-US-OPEN-10MIN-MONITOR-001",
+  "architecture": "B",
+  "monitor_scope": [
+    "NQ",
+    "GOLD",
+    "SILVER",
+    "OIL",
+    "BTC"
+  ],
+  "us_cash_open_local": "09:30 America/New_York semantics",
+  "first_3h_minutes": 180,
+  "cadence_minutes": 10,
+  "hourly_report_preserved": true,
+  "hourly_latest_overwrite_allowed": false,
+  "ten_minute_status_artifact": "US_OPEN_10M_STATUS.json",
+  "ten_minute_alert_artifact_pattern": "US_OPEN_10M_ALERT_<CHECK_ID>.json",
+  "live_activation": false,
+  "alert_on_no_material_change": false
+}
