@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Connectivity Lead/Lag Record",
+  "type": "object",
+  "required": [
+    "LEADING_FACTOR",
+    "TRANSMISSION_PATH",
+    "TARGET_MARKET",
+    "OBSERVED_LAG",
+    "TARGET_RESPONSE",
+    "INVALIDATION_CONDITION",
+    "CLASSIFICATION"
+  ],
+  "properties": {
+    "CLASSIFICATION": {
+      "enum": [
+        "OBSERVED_ASSOCIATION",
+        "LEAD_LAG_CANDIDATE",
+        "CAUSAL_HYPOTHESIS",
+        "VALIDATED_SIGNAL"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

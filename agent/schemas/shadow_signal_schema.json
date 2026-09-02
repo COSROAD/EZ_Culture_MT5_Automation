@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shadow Signal Record",
+  "type": "object",
+  "required": [
+    "SHADOW_ID",
+    "MARKET",
+    "TIME",
+    "DIRECTION",
+    "ACTION",
+    "RISK_STATE",
+    "ADD_PERMISSION",
+    "REFERENCE_PRICE"
+  ],
+  "properties": {
+    "DIRECTION": {
+      "enum": [
+        "STRONG_LONG",
+        "LONG",
+        "LONG_CANDIDATE",
+        "NEUTRAL",
+        "SHORT_CANDIDATE",
+        "SHORT",
+        "STRONG_SHORT"
+      ]
+    },
+    "ADD_PERMISSION": {
+      "enum": [
+        "ADD_ALLOWED",
+        "NO_ADD"
+      ]
+    },
+    "LIVE_ORDER_ALLOWED": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

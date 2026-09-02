@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reverse Event Record",
+  "type": "object",
+  "required": [
+    "EVENT_ID",
+    "MARKET",
+    "EVENT_TYPE",
+    "EVENT_TIME_UTC",
+    "EVENT_TIME_KST",
+    "START_PRICE",
+    "END_PRICE",
+    "MOVE",
+    "EVENT_WINDOW",
+    "PRE_EVENT_FEATURES",
+    "CROSS_MARKET_CONTEXT",
+    "SIGNAL_CONTEXT",
+    "FRESHNESS_CONTEXT"
+  ],
+  "properties": {
+    "EVENT_ID": {
+      "type": "string"
+    },
+    "MARKET": {
+      "enum": [
+        "NQ",
+        "Gold",
+        "Silver",
+        "Oil",
+        "BTC"
+      ]
+    },
+    "EVENT_TYPE": {
+      "type": "string"
+    },
+    "EVENT_TIME_UTC": {
+      "type": "string"
+    },
+    "EVENT_TIME_KST": {
+      "type": "string"
+    },
+    "BROKER": {
+      "type": "string"
+    },
+    "SOURCE": {
+      "type": "string"
+    },
+    "PRE_EVENT_FEATURES": {
+      "type": "object"
+    },
+    "CROSS_MARKET_CONTEXT": {
+      "type": "object"
+    },
+    "FRESHNESS_CONTEXT": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

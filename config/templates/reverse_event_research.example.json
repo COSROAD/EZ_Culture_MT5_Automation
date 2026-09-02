@@ -1,0 +1,39 @@
+{
+  "task_id": "TASK-REVERSE-EVENT-RESEARCH-001",
+  "thresholds": {
+    "policy": "RESEARCH_CANDIDATE_ONLY",
+    "methods": [
+      "absolute",
+      "percentage",
+      "atr_normalized",
+      "rolling_volatility_normalized",
+      "quantile",
+      "zscore_candidate",
+      "time_normalized_velocity"
+    ],
+    "approved_production_threshold": false
+  },
+  "lookback_seconds": [
+    60,
+    180,
+    300,
+    600,
+    900,
+    1200,
+    1800,
+    3600
+  ],
+  "event_types": [
+    "RAPID_UP_MOVE",
+    "RAPID_DOWN_MOVE",
+    "REVERSAL_UP",
+    "REVERSAL_DOWN",
+    "VOLATILITY_EXPANSION",
+    "BREAKOUT",
+    "FAILED_BREAKDOWN",
+    "FAILED_BREAKOUT",
+    "DIRECTION_FLIP"
+  ],
+  "live_order": false,
+  "shadow_decision": true
+}
