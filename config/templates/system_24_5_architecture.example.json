@@ -1,0 +1,25 @@
+{
+  "final_target": "24/5_CONTINUOUS_REAL_TIME_LEADING_SIGNAL_AUTOMATED_TRADING_SYSTEM",
+  "layers": {
+    "L0": "LIVE_TICK_MICROSTRUCTURE",
+    "L1": "M1_TIMING_REVERSAL",
+    "L2": "M5_SETUP_CONFIRMATION",
+    "L3": "CROSS_MARKET_MACRO_REGIME",
+    "L4": "RISK_ADD_PERMISSION",
+    "L5": "SHADOW_DECISION",
+    "L6": "FUTURE_LIVE_EA_EXECUTION_AFTER_VALIDATION"
+  },
+  "sessions": [
+    "ASIA",
+    "EUROPE",
+    "US_PREMARKET",
+    "US_CASH_OPEN_INTENSIVE",
+    "US_MIDSESSION",
+    "US_LATE_SESSION",
+    "ROLLOVER_MAINTENANCE",
+    "MARKET_CLOSED"
+  ],
+  "execution_clock_policy": "CONTINUOUS_TICK_M1_EVENT_DRIVEN_WITH_M5_CONFIRMATION",
+  "reporting_clocks_are_execution_dependencies": false,
+  "live_order": false
+}
