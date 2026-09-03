@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": [
+    "time_utc",
+    "time_kst",
+    "session",
+    "markets",
+    "health",
+    "macro_gap",
+    "decisions"
+  ]
+}

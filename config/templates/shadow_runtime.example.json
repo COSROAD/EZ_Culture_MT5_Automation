@@ -1,0 +1,12 @@
+{
+  "markets": [
+    "NQ",
+    "GOLD",
+    "SILVER",
+    "OIL",
+    "BTC"
+  ],
+  "output_root": "04_CSV_\uae30\ub85d/ShadowRuntime",
+  "live_order": false,
+  "scheduler_change": false
+}
