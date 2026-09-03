@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "required": [
+    "RUNTIME_STATUS",
+    "PROCESS_ID",
+    "START_TIME",
+    "LAST_HEARTBEAT",
+    "LAST_DECISION_TIME",
+    "LOCK_STATE",
+    "TICK_FRESHNESS",
+    "M1_FRESHNESS",
+    "M5_FRESHNESS",
+    "SIGNAL_FRESHNESS",
+    "MACRO_STATUS",
+    "BROKER_STATUS",
+    "LAST_ERROR",
+    "RECOVERY_STATE"
+  ],
+  "properties": {
+    "RUNTIME_STATUS": {
+      "enum": [
+        "RUNNING",
+        "DEGRADED",
+        "VERIFY_REQUIRED",
+        "MARKET_CLOSED",
+        "STOPPED",
+        "ERROR"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
