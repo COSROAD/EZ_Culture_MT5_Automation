@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decision Source Registry",
+  "type": "object",
+  "required": [
+    "SOURCE_ID",
+    "SOURCE_TYPE",
+    "MARKET",
+    "INSTRUMENT",
+    "TIMESTAMP_UTC",
+    "RECEIVED_TIME_UTC",
+    "FRESHNESS",
+    "QUALITY_STATE",
+    "AVAILABLE"
+  ],
+  "properties": {
+    "FRESHNESS": {
+      "enum": [
+        "FRESH",
+        "STALE",
+        "MARKET_CLOSED",
+        "VERIFY_REQUIRED",
+        "NOT_AVAILABLE"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

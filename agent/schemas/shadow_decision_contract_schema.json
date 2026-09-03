@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shadow Decision Contract",
+  "type": "object",
+  "required": [
+    "MARKET",
+    "TIME_UTC",
+    "TIME_KST",
+    "DIRECTION",
+    "DIRECTION_CONFIDENCE",
+    "ENTRY_PERMISSION",
+    "ADD_PERMISSION",
+    "EXIT_STATE",
+    "RISK_STATE",
+    "CONFLICT_LEVEL",
+    "HISTORICAL_MATCH",
+    "REGIME",
+    "TRIGGER_FEATURES",
+    "CONTRADICTING_FEATURES",
+    "FRESHNESS_SUMMARY",
+    "REFERENCE_PRICE"
+  ],
+  "properties": {
+    "FINAL_ACTION": {
+      "enum": [
+        "BUY",
+        "SELL",
+        "WAIT",
+        "HOLD",
+        "NO_ADD",
+        "EXIT_CANDIDATE"
+      ]
+    },
+    "LIVE_ORDER_ALLOWED": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}
