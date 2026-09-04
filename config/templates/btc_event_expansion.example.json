@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-BTC-EVENT-REPLAY-003",
+  "base_main": "93ef3a3976ff6775b4f0e6defd2aec445568694b",
+  "independence_gap_minutes": 90,
+  "primary_statistics": "INDEPENDENT_CASES_ONLY",
+  "sessions": ["ASIA","EUROPE","US_PREMARKET","US_CASH","US_LATE"],
+  "outcome_minutes": [60,180,360,720,1440,2880],
+  "macro_gap": {"DXY":"VERIFY_REQUIRED","2Y":"VERIFY_REQUIRED","10Y":"VERIFY_REQUIRED","30Y":"VERIFY_REQUIRED","REAL_YIELD":"VERIFY_REQUIRED"},
+  "crypto_gap": {"BTC_ETF_FLOW":"VERIFY_REQUIRED","STABLECOIN_FLOW":"VERIFY_REQUIRED","INSTITUTIONAL_FLOW":"VERIFY_REQUIRED","REGULATORY_STATE":"REFERENCE_ONLY_OR_VERIFY_REQUIRED"},
+  "production_threshold": false,
+  "live_order": false
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BTC Event Expansion Case",
+  "type": "object",
+  "required": ["EVENT_CLUSTER_ID","INDEPENDENT_CASE_FLAG","OVERLAPPING_EVENT_FLAG","SESSION","ADD_STATE","OUTCOMES","FUTURE_LEAKAGE"],
+  "properties": {"FUTURE_LEAKAGE": {"const": false}},
+  "additionalProperties": true
+}
