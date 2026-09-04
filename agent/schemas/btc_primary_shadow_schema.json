@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BTC Primary Shadow Decision",
+  "type": "object",
+  "required": [
+    "REGIME",
+    "REGIME_CONFIDENCE",
+    "TACTICAL_STATE",
+    "DIRECTION",
+    "ENTRY_PERMISSION",
+    "ADD_PERMISSION",
+    "EXIT_STATE",
+    "RISK_STATE",
+    "NQ_RELATIVE_STATE",
+    "MACRO_STATE",
+    "CRYPTO_LIQUIDITY_STATE",
+    "ETF_FLOW_STATE",
+    "REGULATORY_STATE",
+    "HISTORICAL_MATCH",
+    "CONFLICT_LEVEL",
+    "WHY_DIRECTION",
+    "WHY_ENTRY",
+    "WHY_ADD",
+    "INVALIDATION",
+    "LIVE_ORDER_ALLOWED"
+  ],
+  "properties": {
+    "LIVE_ORDER_ALLOWED": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

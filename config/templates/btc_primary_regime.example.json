@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK-BTC-PRIMARY-REGIME-001",
+  "primary_target": "BTC",
+  "roles": {
+    "BTC": "HIGH_PRIMARY_TARGET",
+    "NQ": "HIGH_CONNECTIVITY_RISK_LIQUIDITY",
+    "GOLD": "MEDIUM_MACRO_REAL_YIELD_SAFE_HAVEN",
+    "SILVER": "MEDIUM_METALS_RELATIVE_STRENGTH_RISK",
+    "OIL": "MEDIUM_INFLATION_RATE_PRESSURE_GEOPOLITICAL"
+  },
+  "time_horizon": {
+    "primary": [
+      "M30",
+      "H1"
+    ],
+    "setup": "M5",
+    "timing": "M1",
+    "microstructure": "TICK"
+  },
+  "macro_gap": {
+    "DXY": "VERIFY_REQUIRED",
+    "US2Y": "VERIFY_REQUIRED",
+    "US10Y": "VERIFY_REQUIRED",
+    "US30Y": "VERIFY_REQUIRED",
+    "REAL_YIELD": "VERIFY_REQUIRED"
+  },
+  "live_order": false
+}
