@@ -318,3 +318,52 @@ def control_samples(btc_m1,event_times,step_minutes=60,exclusion_minutes=90,max_
         if len(out)>=max_samples:
             break
     return out
+
+# --- TASK-BTC-EVENT-REPLAY-004 zero-count reporting contract ---
+EXPECTED_CASE_CATEGORIES = (
+    "BULLISH_TRANSITION",
+    "BEARISH_TRANSITION",
+    "BULLISH_CONTINUATION",
+    "BEARISH_CONTINUATION",
+    "HEALTHY_LONG_PULLBACK",
+    "FAILED_LONG_PULLBACK",
+    "FALSE_BULLISH_REVERSAL",
+    "FALSE_BEARISH_REVERSAL",
+    "BTC_NQ_DECOUPLING",
+)
+
+def normalize_case_counts(counts):
+    """Return every expected case category as an explicit numeric count."""
+    src = counts or {}
+    out = {name: 0 for name in EXPECTED_CASE_CATEGORIES}
+    for key, value in dict(src).items():
+        if key in out:
+            try:
+                out[key] = int(value)
+            except (TypeError, ValueError):
+                out[key] = 0
+    return out
+
+def reporting_safety_snapshot(summary):
+    """Reporting-only normalization. Does not create trading authority."""
+    summary = summary or {}
+    add_stats = dict(summary.get("ADD_STATS") or {})
+    no_add_stats = dict(summary.get("NO_ADD_STATS") or {})
+    mae_mfe = dict(summary.get("MAE_MFE") or {})
+    adequacy = dict(summary.get("SAMPLE_ADEQUACY") or {})
+    return {
+        "CASE_COUNTS": normalize_case_counts(summary.get("CASE_COUNTS")),
+        "SAMPLE_ADEQUACY": adequacy.get("OVERALL", "INSUFFICIENT_SAMPLE"),
+        "PRODUCTION_READY": bool(adequacy.get("PRODUCTION_READY", False)),
+        "ADD_SUCCESS_RATE_CANDIDATE": add_stats.get("ADD_SUCCESS_RATE_CANDIDATE"),
+        "ADD_SAMPLE_STATUS": add_stats.get("SAMPLE_STATUS", "INSUFFICIENT_SAMPLE"),
+        "NO_ADD_PROTECTION_RATE": no_add_stats.get("NO_ADD_PROTECTION_RATE"),
+        "NO_ADD_SAMPLE_STATUS": no_add_stats.get("SAMPLE_STATUS", "INSUFFICIENT_SAMPLE"),
+        "MEDIAN_MAE": mae_mfe.get("MEDIAN_MAE"),
+        "MEDIAN_MFE": mae_mfe.get("MEDIAN_MFE"),
+        "MAE_MFE_CLASSIFICATION": "DESCRIPTIVE_RESEARCH_ONLY",
+        "BTC_NQ_PREDICTIVE_STATUS": "NO_PREDICTIVE_CLAIM",
+        "PRODUCTION_THRESHOLD_PROMOTION": False,
+    }
+# --- END TASK-BTC-EVENT-REPLAY-004 ---
+
