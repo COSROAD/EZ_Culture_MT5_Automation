@@ -1,0 +1,34 @@
+{
+  "task_id": "TASK-BTC-EVENT-REPLAY-001",
+  "btc_symbols": [
+    "BTCUSD"
+  ],
+  "nq_symbols": [
+    "US100",
+    "NQ2.ez2"
+  ],
+  "preferred_broker": "CultureCapital",
+  "lookback_minutes": [
+    5,
+    15,
+    30,
+    60,
+    180,
+    360,
+    720,
+    1440
+  ],
+  "outcome_minutes": [
+    5,
+    30,
+    60,
+    180,
+    360,
+    720,
+    1440
+  ],
+  "macro_gap": "VERIFY_REQUIRED",
+  "crypto_specific_gap": "VERIFY_REQUIRED",
+  "production_threshold": false,
+  "live_order": false
+}

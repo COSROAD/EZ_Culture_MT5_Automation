@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BTC Historical Event Replay Record",
+  "type": "object",
+  "required": [
+    "EVENT_ID",
+    "EVENT_TYPE",
+    "TIME_UTC",
+    "TIME_KST",
+    "SESSION",
+    "REFERENCE_PRICE",
+    "PREVIOUS_REGIME",
+    "TACTICAL_STATE",
+    "BTC_NQ_STATE",
+    "TRIGGER_FEATURES",
+    "CONTRADICTING_FEATURES",
+    "FRESHNESS",
+    "POST_EVENT_MFE",
+    "POST_EVENT_MAE",
+    "OUTCOME"
+  ],
+  "properties": {
+    "OUTCOME": {
+      "const": "RESEARCH_ONLY"
+    }
+  },
+  "additionalProperties": true
+}
